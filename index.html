@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book Recommendation System</title>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+  <h1>Find The Perfect Pick For You</h1>
+  <div class="form-container">
+    <label for="genre">Genre:</label>
+    <select id="genre" onchange="handleGenreSelection()">
+      <option value="">Select genre</option>
+      <option value="fiction">Fiction</option>
+      <option value="nonfiction">Non-fiction</option>
+      <option value="finance">Finance</option>
+      <option value="money">Money</option>
+      <option value="science fiction">Sci-fi</option>
+      <option value="novel">Novel</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="romance">Romance</option>
+      <option value="narrative">Narrative</option>
+      <option value="self help">Self-help</option>
+      <option value="history">History</option>
+      <option value="other">Other</option>
+    </select><br>
+    <input type="text" id="customGenre" placeholder="Enter custom genre" style="display: none;"><br>
+    <label for="writer">Writer:</label>
+    <input type="text" id="writer" placeholder="Enter writer (optional)"><br>
+    <button onclick="getRecommendations()">Get Recommendations</button>
+  </div>
+
+  <div id="recommendations-container">
+    <h2>Your Top 10 Book Recommendations:</h2>
+    <ul id="recommendations"></ul>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
